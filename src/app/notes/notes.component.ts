@@ -13,7 +13,7 @@ import {
   styleUrls: ["./notes.component.css"]
 })
 export class NotesComponent implements OnInit {
-  dateVal  =new Date();
+  dateVal = new Date();
 
   recognition: any;
 
@@ -29,20 +29,16 @@ export class NotesComponent implements OnInit {
       document.getElementById("toolbar").focus();
     };
   }
-
   onDismiss(event) {
     this.dismiss.emit(event);
   }
-
   onFocusOut(event) {
     this.focusout.emit(event);
   }
-
   record(event) {
     this.recognition.start();
   }
 }
-
 export interface IWindow extends Window {
   webkitSpeechRecognition: any;
 }

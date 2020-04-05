@@ -1,17 +1,16 @@
-  <!-- <input type="text" class="search"> -->
+<!-- <input type="text" class="search"> -->
 
 <div class="note">
-  	<div class="content" contenteditable="true">
-<h4>Title</h4>	</div>
-  <div class="note_toolbar">
-	  <span class="close material-icons" (click)="onDismiss($event)">close</span>
-  </div>
+	<div class="content" contenteditable="true">
+		<h4>Title</h4>
+	</div>
+	<div class="note_toolbar">
+		<span class="close material-icons" (click)="onDismiss($event)">close</span>
+	</div>
 	<div class="content" contenteditable="true" (blur)="onFocusOut($event)">Content
 		<ng-content></ng-content>
 	</div>
-  <div class="footer">
-	  <!-- <button class="material-icons" (click)="record($event)">settings_voice</button> -->
-        <p>{{ dateVal | date: 'shortTime' }}</p>
-
-  </div>
+	<div class="footer">
+		<p>{{ dateVal | date: 'shortTime' }}</p>
+	</div>
 </div>
